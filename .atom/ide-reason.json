@@ -1,0 +1,36 @@
+{
+  "codelens": {
+    "enabled": true,
+    "unicode": true
+  },
+  "debounce": {
+    "linter": 500
+  },
+  "diagnostics": {
+    "merlinPerfLogging": false,
+    "tools": [
+      "merlin"
+    ]
+  },
+  "format": {
+    "width": null
+  },
+  "path": {
+    "bsb": "bsb",
+    "env": "env",
+    "esy": "esy",
+    "ocamlfind": "ocamlfind",
+    "ocamlmerlin": "ocamlmerlin",
+    "opam": "opam",
+    "rebuild": "rebuild",
+    "refmt": "refmt",
+    "refmterr": "refmterr",
+    "rtop": "rtop"
+  },
+  "server": {
+    "languages": [
+      "ocaml",
+      "reason"
+    ]
+  }
+}
