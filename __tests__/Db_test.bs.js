@@ -2,12 +2,18 @@
 'use strict';
 
 var Jest = require("@glennsl/bs-jest/src/jest.js");
+var Curry = require("bs-platform/lib/js/curry.js");
 var Db$Reasonbot = require("../src/Db.bs.js");
 
-Jest.testPromise(/* None */0, "Db connects Successfully", (function () {
-        return Db$Reasonbot.db.then((function () {
-                      return Promise.resolve(Jest.pass);
-                    }));
+Jest.testAsync(/* None */0, "Db connects Successfully", (function (cb) {
+        Db$Reasonbot.createDb((function (db) {
+                if (db) {
+                  return Curry._1(cb, Jest.pass);
+                } else {
+                  return Curry._1(cb, Jest.fail("Db failed to construct"));
+                }
+              }));
+        return /* () */0;
       }));
 
 /*  Not a pure module */
