@@ -29,5 +29,10 @@
   "bugs": {
     "url": "https://github.com/mkhoeini/wiki3dabot/issues"
   },
-  "homepage": "https://github.com/mkhoeini/wiki3dabot#readme"
+  "homepage": "https://github.com/mkhoeini/wiki3dabot#readme",
+  "jest": {
+    "testMatch": [
+      "**/*_test.bs.js"
+    ]
+  }
 }

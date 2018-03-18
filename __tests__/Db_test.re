@@ -1,7 +1,4 @@
-open Jest;
-
-/* open Expect; */
-open! Expect.Operators;
+open TestHelper;
 
 testAsync("Db connects Successfully", cb =>
   Db.createDb(db =>
